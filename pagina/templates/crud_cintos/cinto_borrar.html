@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block contenido %}
+<br>
+
+<h1>Borrar cinturon</h1>
+
+<form action="" method="POST">
+    {% csrf_token %}
+    Estas seguro que deseas borrar el cinturon {{cinturon.cod_producto_cinto}}?    
+    <input type='submit' value='Eliminar'>
+</form>
+
+
+{% endblock %}

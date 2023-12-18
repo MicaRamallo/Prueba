@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block contenido %}
+<br>
+
+<h1>Lista de mallas</h1>
+
+<a href={% url 'ListaMallas' %}> Mallas </a>
+
+{% for malla in ListaMallas %}
+    <li>Malla - Codigo MAL{{malla.cod_producto_malla}}</li>
+    <p>
+        <a href={% url 'DetalleMalla' malla.pk %}> Ver </a>
+
+        <a href={% url 'EditarMalla' malla.pk %}> Editar </a>
+
+        <a href={% url 'BorrarMalla' malla.pk %}> Borrar </a>
+    </p>
+
+{% endfor %}
+
+{% endblock %}

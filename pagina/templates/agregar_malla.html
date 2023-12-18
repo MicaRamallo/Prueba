@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block contenido %}
+<br>
+<br>
+
+<h1>Agregar Malla</h1>
+
+<form action='/web/agregar_malla/' method="post">
+    {% csrf_token %}
+    <p> Codigo: <input type = "number" name="cod_producto_malla">
+    <p> Modelo: <input type = "text" name="modelo">
+    <p> Color: <input type = "text" name="color">
+    <p> Talle: <input type="number" name="talle">
+    <p> Precio: <input type="number" name="precio">
+    <br>
+    <br>
+    <input type = "submit" value="Enviar">
+ </form>
+
+ {% endblock %}

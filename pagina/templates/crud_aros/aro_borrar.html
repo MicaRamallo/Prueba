@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block contenido %}
+<br>
+
+<h1>Borrar aro</h1>
+
+<form action="" method="POST">
+    {% csrf_token %}
+    Estas seguro que deseas borrar el aro {{aro.cod_producto_aro}}?    
+    <input type='submit' value='Eliminar'>
+</form>
+
+
+{% endblock %}

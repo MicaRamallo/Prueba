@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block contenido %}
+<br>
+
+{% if mallas_encontradas %}
+    {% for malla in mallas_encontradas %}
+        Talle: {{malla.talle}},
+        Codigo: MAL{{malla.cod_producto_malla}},
+        Modelo: {{malla.modelo}},
+        Color: {{malla.color}},
+        Precio: {{malla.precio}}
+        <br>
+    {% endfor %}
+{% else %}
+    <p>No hay stock de ese talle</p>
+{% endif %}
+
+{% endblock %}

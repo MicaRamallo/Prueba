@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block contenido %}
+<br>
+
+<h1>Detalle</h1>
+
+<p> Codigo de la malla: <i>MAL{{malla.cod_producto_malla}}</i></p>
+<p> Modelo: <i>{{malla.modelo}}</i></p>
+<p> Color: <i>{{malla.color}}</i> </p>
+<p> Talle: <i>{{malla.talle}}</i></p>
+<p> Precio: <i>{{malla.precio}}</i> </p>
+<p>
+    <a href={% url 'ListaMallas' %}> Regresar </a>
+</p>
+
+{% endblock %}

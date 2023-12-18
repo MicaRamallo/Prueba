@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block contenido %}
+<br>
+<br>
+
+<h1>Agregar Aro</h1>
+
+<form action='/web/agregar_aro/' method="POST">
+    {% csrf_token %}
+    <p> Codigo: <input type = "number" name="cod_producto_aro">
+    <p> Material: <input type = "text" name="material">
+    <p> Color: <input type = "text" name="color">
+    <p> Precio: <input type="number" name="precio">
+    <br>
+    <br>
+    <input type = "submit" value="Enviar">
+ </form>
+
+ {% endblock %}

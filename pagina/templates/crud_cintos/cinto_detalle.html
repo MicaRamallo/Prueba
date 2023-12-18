@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block contenido %}
+<br>
+
+<h1>Detalle</h1>
+
+<p> Codigo del cinturon: <i>CIN{{cinturon.cod_producto_cinto}}</i></p>
+<p> Largo: <i>{{cinturon.largo}}</i></p>
+<p> Color: <i>{{cinturon.color}}</i> </p>
+<p> Precio: <i>{{cinturon.precio}}</i> </p>
+<p>
+    <a href={% url 'ListaCintos' %}> Regresar </a>
+</p>
+
+{% endblock %}

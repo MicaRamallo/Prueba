@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block contenido %}
+<br>
+
+<h2>Perfil del usuario</h2>
+
+{{request.user.perfil}},
+
+Imagen de Perfil: <img src="{{request.user.perfil.imagen.url}}" alt="" height="100px">
+<br>
+<a href="{% url 'EditarPerfil' request.user.perfil.pk %}">Editar perfil</a>
+
+
+{% endblock %}

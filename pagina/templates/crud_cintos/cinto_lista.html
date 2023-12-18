@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block contenido %}
+<br>
+
+<h1>Lista de cinturones</h1>
+
+<a href={% url 'ListaCintos' %}> Cinturones </a>
+
+{% for cinturon in ListaCintos %}
+    <li>Cinturon - Codigo CIN{{cinturon.cod_producto_cinto}}</li>
+    <p>
+        <a href={% url 'DetalleCinto' cinturon.pk %}> Ver </a>
+
+        <a href={% url 'EditarCinto' cinturon.pk %}> Editar </a>
+
+        <a href={% url 'BorrarCinto' cinturon.pk %}> Borrar </a>
+    </p>
+
+{% endfor %}
+
+{% endblock %}

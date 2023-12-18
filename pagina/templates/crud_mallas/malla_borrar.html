@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block contenido %}
+<br>
+
+<h1>Borrar malla</h1>
+
+<form action="" method="POST">
+    {% csrf_token %}
+    Estas seguro que deseas borrar la malla {{malla.cod_producto_malla}}?    
+    <input type='submit' value='Eliminar'>
+</form>
+
+
+{% endblock %}

@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block contenido %}
+<br>
+
+<h1>Editar perfil</h1>
+<h1>De {{request.user.username}}</h1>
+
+<form action="" method="POST" enctype="multipart/form-data">
+    {% csrf_token %}
+        {{ form.as_p}}
+    <button type='submit'>Guardar</button>
+</form>
+
+{% endblock %}

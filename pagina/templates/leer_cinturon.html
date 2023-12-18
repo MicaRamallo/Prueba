@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block contenido %}
+
+<br>
+
+{% for cinturon in Cinturones %}
+    <li>Cinturon con codigo: {{cinturon.cod_producto_cinto}}</li>
+    <button>
+        <a href="{% url 'eliminar cinto' cinturon.cod_producto_cinto %}"> Eliminar </a>
+    </button>
+    <button>
+        <a href="{% url 'editar cinto' cinturon.cod_producto_cinto %}"> Editar </a>
+    </button>
+{% endblock %}

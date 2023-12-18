@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block contenido %}
+<br>
+
+<h1>Lista de aros</h1>
+
+<a href={% url 'ListaAros' %}> Aros </a>
+
+{% for aro in ListaAros %}
+    <li>Aro - Codigo ARO{{aro.cod_producto_aro}}</li>
+    <p>
+        <a href={% url 'DetalleAro' aro.pk %}> Ver </a>
+
+        <a href={% url 'EditarAro' aro.pk %}> Editar </a>
+
+        <a href={% url 'BorrarAro' aro.pk %}> Borrar </a>
+    </p>
+
+{% endfor %}
+
+{% endblock %}

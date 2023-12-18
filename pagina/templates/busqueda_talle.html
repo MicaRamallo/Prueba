@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block contenido %}
+<br>
+
+<h1>Buscar por talle</h1>
+<form action='/web/busqueda_talle/' method="POST">
+    {% csrf_token %}
+    <p> Talle: <input type='text' name='talle'>
+    <br>
+    <br>
+    <input type='submit' value='Buscar'>
+</form>
+
+{% endblock %}

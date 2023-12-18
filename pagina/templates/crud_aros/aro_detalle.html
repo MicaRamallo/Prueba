@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block contenido %}
+<br>
+
+<h1>Detalle</h1>
+
+<p> Codigo del aro: <i>ARO{{aro.cod_producto_aro}}</i></p>
+<p> Material: <i>{{aro.material}}</i></p>
+<p> Color: <i>{{aro.color}}</i> </p>
+<p> Precio: <i>{{aro.precio}}</i> </p>
+<p>
+    <a href={% url 'ListaAros' %}> Regresar </a>
+</p>
+
+{% endblock %}

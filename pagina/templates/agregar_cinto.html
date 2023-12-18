@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block contenido %}
+<br>
+<br>
+
+<h1>Agregar Cinturon</h1>
+
+<form action='/web/agregar_cinto/' method="post">
+    {% csrf_token %}
+    <p> Codigo: <input type = "number" name="cod_producto_cinto">
+    <p> Largo: <input type = "number" name="largo">
+    <p> Color: <input type = "text" name="color">
+    <p> Precio: <input type="number" name="precio">
+    <br>
+    <br>
+    <input type = "submit" value="Enviar">
+ </form>
+
+ {% endblock %}
